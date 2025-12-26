@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELDRI-TH | Cosmic Horror Sound Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Metamorphous&display=swap');
+        
+        body {
+            margin: 0;
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'JetBrains+Mono', monospace;
+            overflow: hidden;
+        }
+
+        .eldritch-font {
+            font-family: 'Metamorphous', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+        .noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Pulsing Glow */
+        @keyframes pulse-void {
+            0% { box-shadow: 0 0 20px rgba(76, 29, 149, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(76, 29, 149, 0.4); }
+            100% { box-shadow: 0 0 20px rgba(76, 29, 149, 0.2); }
+        }
+        .void-glow { animation: pulse-void 4s infinite ease-in-out; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <div class="noise-bg fixed inset-0 z-50"></div>
+</body>
+</html>

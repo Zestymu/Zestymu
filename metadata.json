@@ -1,0 +1,5 @@
+{
+  "name": "Copy of ELDRI-TH: Cosmic Horror Synth",
+  "description": "A dark, atmospheric synthesizer designed to generate Lovecraftian soundscapes, slimy textures, and cavernous drones using Web Audio API and organic DSP.",
+  "requestFramePermissions": []
+}
